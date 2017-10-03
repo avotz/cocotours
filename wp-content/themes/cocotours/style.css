@@ -937,6 +937,12 @@ iframe {
 .txt-center {
   text-align: center;
 }
+.txt-white {
+  color: #fff;
+}
+.txt-shadow p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
+}
 .search-submit,
 .comment-form .submit,
 .wpcf7-submit,
@@ -1306,6 +1312,30 @@ iframe {
   background-size: cover;
   height: 95vh;
 }
+.banner .item {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+/*&.bgPage
+			background-position: center center;
+			background-repeat repeat,no-repeat,no-repeat
+			background-size auto auto,cover,cover
+			position: static;
+			height: 260px;*/
+}
+.banner.banner-page {
+  min-height: auto;
+  height: 100vh;
+  padding-top: 6rem;
+  position: fixed;
+}
 .banner-logo {
   position: absolute;
   left: 50%;
@@ -1624,7 +1654,8 @@ iframe {
   }
 }
 .main {
-  padding: 5.5rem 0rem;
+  padding: 7.5rem 0rem;
+  min-height: 700px;
 }
 .page .entry-header,
 .archive .entry-header,
@@ -1638,7 +1669,9 @@ iframe {
   padding: 0 1rem;
 }
 .contact-info,
-.contact-media {
+.about-info,
+.contact-media,
+.about-media {
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -1651,10 +1684,17 @@ iframe {
   .contact-media iframe {
     height: 400px;
   }
+  .about-info {
+    width: 65%;
+  }
+  .about-media {
+    width: 30%;
+  }
 }
 .footer {
   background: #000;
   color: #fff;
+  position: relative;
 }
 .footer ul {
   list-style: none;
@@ -2011,13 +2051,39 @@ margin-bottom 0,
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.related .products {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.related .products li {
+  margin: 0.5rem !important;
+}
+.related .products li .ajax_add_to_cart {
+  display: none;
+}
 .related .price {
   display: none !important;
 }
 @media screen and (min-width: 1000px) {
   .related {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

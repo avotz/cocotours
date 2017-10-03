@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<section class="main">
+	<section class="main ">
 		<div  class="inner">
 
 			<?php

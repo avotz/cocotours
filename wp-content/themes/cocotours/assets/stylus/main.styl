@@ -173,6 +173,28 @@
 	background: url(./img/bg-banner.jpg) no-repeat center center fixed;
 	background-size: cover;
 	height 95vh
+	.item
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		top: 0;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover
+		
+		/*&.bgPage
+			background-position: center center;
+			background-repeat repeat,no-repeat,no-repeat
+			background-size auto auto,cover,cover
+			position: static;
+			height: 260px;*/
+
+	&.banner-page
+		min-height: auto
+		height 100vh
+		padding-top: 6rem
+		position: fixed 
 	&-logo
 		position absolute
 		left 50%
@@ -382,8 +404,8 @@
 
 			
 .main 
-	padding: 5.5rem 0rem
-
+	padding: 7.5rem 0rem
+	min-height: 700px
 .page
 .archive
 	.entry-header
@@ -393,6 +415,7 @@
 	.entry-content
 		padding: 0 1rem
 .contact
+.about
 	&-info
 	&-media
 		width: 100%
@@ -404,10 +427,17 @@
 			width: 48%
 			iframe
 				height: 400px
+	.about
+		&-info
+			width: 65%
+			
+			//background-color: rgba(0,0,0,.75)
+		&-media
+			width: 30%
 .footer
 	background #000
 	color white
-	
+	position: relative
 	ul 
 		list-style none
 		li 

@@ -12,8 +12,8 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
 function jk_related_products_args( $args ) {
-  $args['posts_per_page'] = 4; // 4 related products
-  $args['columns'] = 4; // arranged in 2 columns
+  $args['posts_per_page'] = 3; // 4 related products
+  $args['columns'] = 3; // arranged in 2 columns
   return $args;
 }
 
