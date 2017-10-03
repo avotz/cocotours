@@ -1182,6 +1182,9 @@ iframe {
   padding-top: 5px;
   z-index: 200;
   position: absolute;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 .header-btn-menu {
   position: absolute;
@@ -1245,9 +1248,10 @@ iframe {
   }
   .header-menu-link,
   .header-menu a {
-    padding: 1.2rem 1.8rem;
+    padding: 1.2rem 1.5rem;
     color: #000;
     line-height: 20px;
+    font-size: 0.8rem;
   }
   .header-menu-link:after,
   .header-menu a:after,
@@ -1282,6 +1286,12 @@ iframe {
   }
   .header-btn-menu {
     display: none;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .header-menu a {
+    padding: 1.2rem 1.8rem;
+    font-size: 1rem;
   }
 }
 .banner {

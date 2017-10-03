@@ -18,16 +18,18 @@
 
 			
 			<div class="footer-email">
-				<a href="tel:(506) 222-222-22"><i class="fa fa-phone"></i> Tel: (506) 222-222-22</a>
-				<a href="mailto:info@cocotours.com"><i class="fa fa-envelope"></i> info@cocotours.com</a>
+				
+				<a href="tel:(506) 2670-1878"><i class="fa fa-phone"></i> Tel: (506) 2670-1878</a>
+				<a href="tel:(506) 8719-4024"><i class="fa fa-phone"></i> Cel: (506) 8719-4024</a>
+				<a href="mailto:info@elcocotours.com"><i class="fa fa-envelope"></i> info@elcocotours.com</a>
 				
 			</div>
 			 <div class="footer-social flex-container-sb">
 				<div><h3>Follow US</h3></div>
 				<div class="footer-social-container">
-					<a href="#" class="header-social-link"><i class="fa fa-facebook"></i></a>
-					<a href="#" class="header-social-link"><i class="fa fa-twitter"></i></a>
-					<a href="#" class="header-social-link"><i class="fa fa-youtube"></i></a>
+					<a href="https://www.facebook.com/elcocotours/" class="header-social-link" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.tripadvisor.com/Attraction_Review-g309246-d12269739-Reviews-El_Coco_Tours-Playa_Hermosa_Province_of_Guanacaste.html" class="header-social-link" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+					<a href="https://www.instagram.com/elcocotours/" class="header-social-link" target="_blank"><i class="fa fa-instagram"></i></a>
 				</div>
 				
 			</div>
@@ -110,7 +112,7 @@
 
 </footer>
 <div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
-		<?php echo do_shortcode('[contact-form-7 id="29" title="Contact form"]');
+		<?php echo do_shortcode('[contact-form-7 id="5" title="Contact form"]');
         ?>               
 	    
 	</div>

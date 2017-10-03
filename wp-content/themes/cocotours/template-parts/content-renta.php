@@ -24,7 +24,10 @@
                 ?>
             </div>
             <div class="contact-media">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.466378756392!2d-85.69433198478445!3d10.542630166347337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e2978ffdfebd3%3A0x22ca60648e0222c!2s151%2C+Provincia+de+Guanacaste%2C+Coco!5e0!3m2!1sen!2scr!4v1507066065684" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+                <iframe id='FrameCliente' frameborder='no' scrolling='no' runat='server'
+
+src='http://www.adobecar.cr/MiniFrame.aspx?id=ALCRR&lang=ENG&BackColor=FFFFFF'></iframe>
             </div>
         </div>
         
