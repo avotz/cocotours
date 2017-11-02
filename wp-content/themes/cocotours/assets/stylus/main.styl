@@ -5,7 +5,7 @@
 @import "blog.styl"
 
 .header
-	height 90px
+	height 120px
 	position absolute
 	width 100%
 	background-color white
@@ -21,7 +21,7 @@
 			font-size 1.5rem
 			padding: .89rem 0.5rem;
 	&-top 
-		text-align right
+		text-align center
 		background #000
 		font-size 12px
 		.header-contact-info 
@@ -78,6 +78,11 @@
 		color rojo
 		outline none
 
+@media screen and (min-width: 498px)
+	.header
+		height 90px
+		&-top 
+			text-align right
 @media screen and (min-width: 1024px)			
 	.header
 		position fixed
@@ -210,7 +215,7 @@
 		
 	.home-video-content
 		background-color: #FFF;
-		position: relative !important;
+		//position: relative !important;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -229,8 +234,8 @@
 		height 100%
 		
 	video
-		width: 100%;
-		height: 100%;
+		min-width: 100%;
+		min-height: 100%;
 		position: absolute;
 		top: 0%;
 		left: 0%;
@@ -397,15 +402,24 @@
 			width 32%
 			&.size-2
 				width 65.8%
+
+	.related.products ul.products
+		li.product
+			width 28%
+
 	.tours-container
 		padding 1rem 0
 	.related.products ul.products
 		padding 3rem 0
+	
 
 			
 .main 
-	padding: 7.5rem 0rem
+	padding: 5.6rem 0rem
 	min-height: 700px
+@media screen and (min-width:498px)
+	.main
+		padding: 5.6rem 0rem
 .page
 .archive
 	.entry-header

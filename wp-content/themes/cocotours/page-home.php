@@ -24,19 +24,24 @@ get_header(); ?>
 
                     <div class="home-video-content">
                         
-                        <video preload="" autobuffer="" loop="loop" autoplay="autoplay"><source src="<?php echo get_template_directory_uri();  ?>/img/video.mp4" type="video/mp4"></video>
+                        <video preload="" autobuffer="" loop="loop" autoplay="autoplay">
+                            <source src="<?php echo get_template_directory_uri();  ?>/img/intro.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri();  ?>/img/intro.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri();  ?>/img/intro.ogv" type="video/ogg">
+                        </video>
+                        
                     </div>
                 </div>
-           <div id="intro-scroll" class="animated fadeInUp">
+           <!-- <div id="intro-scroll" class="animated fadeInUp">
                 <div id="intro-scroll-arrows"></div>
-            </div>
+            </div> -->
            
         </section>
 
         <section class="featured">
         <div class="border-intro-bottom"></div>
         <div class="inner">
-            <h2 class="striped clipped" data-text="Lorem Ipsum dolor sit">Lorem Ipsum dolor sit</h2>
+            <h2 class="striped clipped" data-text="Tour Categories">Tour Categories</h2>
 
             <div class="featured-container flex-container-sb">
                 <div class="featured-item">
