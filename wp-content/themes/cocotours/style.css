@@ -1487,6 +1487,7 @@ iframe {
   left: 0%;
   margin: 0px;
   padding: 0px;
+  display: none;
 }
 #intro-scroll {
   position: absolute;
@@ -1506,7 +1507,7 @@ iframe {
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
 }
 @media screen and (min-width: 768px) {
-  .banner .home-video video {
+  .banner video {
     display: block;
   }
 }
