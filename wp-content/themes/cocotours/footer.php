@@ -48,27 +48,55 @@
 			<div class="footer-info footer-bottom-item">
 				<h5>Our Tours</h5>
 			   <ul>
-				   <li><a href="#">Tour land</a></li>
-					<li><a href="#">Tour water</a></li>
-					 <li><a href="#">Tour lorem</a></li>
+				   <li><a href="<?php echo esc_url( home_url( '/tour-category/land-tours/' ) ); ?>">Tour land</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/tour-category/water-tours/' ) ); ?>">Tour water</a></li>
+					 <li><a href="<?php echo esc_url( home_url( '/tour-category/sport-fishing/' ) ); ?>">Sport Fishing</a></li>
 			   </ul>
 				
 			</div>
 			<div class="footer-blog footer-bottom-item">
 			   <h5>News</h5>
+			   
 			   <ul>
-				   <li><em>14.07.2017</em><br>
-					<div class="footer-blog-text">USA wollen mehr Daten von Reisenden - Deutschland ist von den Anforderungen aber offenbar kaum betroffen.</div>
-					<p><a class="transition article-link icomoon" data-icon="j" aria-hidden="true" href="#">Link</a></p>
-					</li>
-					<li><em>14.07.2017</em><br>
-					<div class="footer-blog-text">USA wollen mehr Daten von Reisenden - Deutschland ist von den Anforderungen aber offenbar kaum betroffen.</div>
-					<p><a class="transition article-link icomoon" data-icon="j" aria-hidden="true" href="#">Link</a></p>
-					</li>
-					<li><em>14.07.2017</em><br>
-					<div class="footer-blog-text">USA wollen mehr Daten von Reisenden - Deutschland ist von den Anforderungen aber offenbar kaum betroffen.</div>
-					<p><a class="transition article-link icomoon" data-icon="j" aria-hidden="true" href="#">Link</a></p>
-					</li>
+			   	  <?php
+                    $args = array(
+                        'post_type' => 'post',
+                        'order' => 'ASC',
+                        //'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
+                        'posts_per_page' => 3,
+                        
+                        
+                        
+                        );
+                    
+
+                    $items = new WP_Query( $args );
+                    // Pagination fix
+                    $temp_query = $wp_query;
+                    $wp_query   = NULL;
+                    $wp_query   = $items;
+                   
+                    if( $items->have_posts() ) {
+                    while( $items->have_posts() ) {
+                        $items->the_post();
+                       
+                        ?>
+						 <li><em><?php echo get_the_date() ?></em><br>
+							<div class="footer-blog-text"><?php the_excerpt(); ?></div>
+							<p><a class="transition article-link icomoon" data-icon="j" aria-hidden="true" href="<?php the_permalink(); ?>">Read more</a></p>
+						</li>
+                           
+
+                           
+                        
+                        <?php
+                    
+                        
+                    }
+                    }
+                    
+                ?>
+				  
 
 			   </ul>
 			</div>
@@ -91,8 +119,7 @@
 				   <li> <a href="tel:(506) 222-222-22"><i class="fa fa-phone"></i> Tel: (506) 222-222-22</a>
 				</li>
 					<li><a href="mailto:info@avotz.com"><i class="fa fa-envelope"></i> info@cocotours.com</a></li>
-					 <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					 tempor incididunt ut labore et dolore magna aliqua. </li>
+					 
 			   </ul>
 			</div>
 			

@@ -15,15 +15,15 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div class="contact-container flex-container-sb">
-            <div class="contact-info">
+		<div class="rent-container flex-container-sb">
+            <div class="rent-info">
                     <?php
                     the_content();
 
                     
                 ?>
             </div>
-            <div class="contact-media">
+            <div class="rent-media">
             
                 <iframe id='FrameCliente' frameborder='no' scrolling='no' runat='server'
 

@@ -40,7 +40,7 @@ get_header(); ?>
 
             <div class="featured-container flex-container-sb">
                 <div class="featured-item">
-                    <img src="<?php echo get_template_directory_uri();  ?>/img/tour-land.jpg">
+                    <img src="<?php echo get_template_directory_uri();  ?>/img/tour-lorem.jpg">
                     <span class="featured-item-title">Land Tours</span>
                     <a href="<?php echo esc_url( home_url( '/tour-category/land-tours/' ) ); ?>" class="featured-item-link"></a>
                 </div>
@@ -50,9 +50,9 @@ get_header(); ?>
                     <a href="<?php echo esc_url( home_url( '/tour-category/water-tours/' ) ); ?>" class="featured-item-link"></a>
                 </div>
                  <div class="featured-item">
-                    <img src="<?php echo get_template_directory_uri();  ?>/img/tour-lorem.jpg">
-                    <span class="featured-item-title">Lorem Ipsum</span>
-                    <a href="#" class="featured-item-link"></a>
+                    <img src="<?php echo get_template_directory_uri();  ?>/img/tour-sport-fishing.jpg">
+                    <span class="featured-item-title">Sport Fishing</span>
+                    <a href="<?php echo esc_url( home_url( '/tour-category/sport-fishing/' ) ); ?>" class="featured-item-link"></a>
                 </div>
             </div>
         </div>
