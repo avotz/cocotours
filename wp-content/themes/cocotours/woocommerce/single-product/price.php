@@ -39,7 +39,7 @@ if($category->parent == 0){
 	
 	<a href="#tour-popup" class="btn naranja tour-popup-link" data-title="<?php echo $product->get_title(); ?>">
 	  
-       Inquery now
+       Inquiry now
       
       </a>
 	<p class="price"><?php echo $product->get_price_html(); ?></p>

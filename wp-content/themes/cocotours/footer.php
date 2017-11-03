@@ -116,7 +116,9 @@
 			<div class="footer-contact footer-bottom-item">
 			   <h5>Contact</h5>
 			   <ul>
-				   <li> <a href="tel:(506) 222-222-22"><i class="fa fa-phone"></i> Tel: (506) 222-222-22</a>
+				   <li> <a href="tel:(506) 2670-1878"><i class="fa fa-phone"></i> Tel: (506) 2670-1878</a>
+				</li>
+				<li> <a href="tel:(506) 8719-4024"><i class="fa fa-phone"></i> Cel: (506) 8719-4024</a>
 				</li>
 					<li><a href="mailto:info@avotz.com"><i class="fa fa-envelope"></i> info@cocotours.com</a></li>
 					 
