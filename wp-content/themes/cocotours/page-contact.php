@@ -38,7 +38,7 @@ get_header(); ?>
              
 
        </section>
-	<section class="main ">
+	<section class="main txt-white txt-shadow">
 		<div  class="inner">
 
 			<?php
