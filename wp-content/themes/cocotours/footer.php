@@ -123,6 +123,10 @@
 					<li><a href="mailto:info@avotz.com"><i class="fa fa-envelope"></i> info@cocotours.com</a></li>
 					 
 			   </ul>
+			   <div class="segu">
+			   
+			   	<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+			   </div>
 			</div>
 			
 			
