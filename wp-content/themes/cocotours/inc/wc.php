@@ -97,3 +97,89 @@ function custom_override_checkout_fields( $fields ) {
 
      return $fields;
 }
+
+/**
+ * Add the field to the checkout
+ */
+add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+
+function my_custom_checkout_field( $checkout ) {
+
+    echo '<div id="tour_card_request">';
+ 
+        woocommerce_form_field( 'credit_card', array(
+          'type'          => 'text',
+          'class'         => array('my-field-class form-row-wide'),
+          'label'         => __('Credit Card Number'),
+          'placeholder'   => __(''),
+          'required'  => false,
+          ), $checkout->get_value( 'credit_card' ));
+  
+      woocommerce_form_field( 'exp_date', array(
+        'type'          => 'text',
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Exp. Date'),
+        'placeholder'   => __('mm/yy'),
+        'required'  => false,
+        ), $checkout->get_value( 'exp_date' ));
+    
+        woocommerce_form_field( 'code_card', array(
+          'type'          => 'text',
+          'class'         => array('my-field-class form-row-wide'),
+          'label'         => __('Code Card'),
+          'placeholder'   => __(''),
+          'required'  => false,
+          ), $checkout->get_value( 'code_card' ));
+        
+
+    echo '</div>';
+
+}
+/**
+ * Process the checkout
+ */
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+
+function my_custom_checkout_field_process() {
+    // Check if set, if its not set add an error.
+    /*if ( ! $_POST['credit_card'] )
+        wc_add_notice( __( '<strong>Credit Card Number</strong> is a required field.' ), 'error' );
+
+     if ( ! $_POST['exp_date'] )
+        wc_add_notice( __( '<strong>Exp. Date</strong> is a required field.' ), 'error' );
+      
+      if ( ! $_POST['code_card'] )
+        wc_add_notice( __( '<strong>Code Card</strong> is a required field.' ), 'error' );*/
+
+}
+
+/**
+ * Update the order meta with field value
+ */
+add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
+
+function my_custom_checkout_field_update_order_meta( $order_id ) {
+    if ( ! empty( $_POST['credit_card'] ) ) {
+        update_post_meta( $order_id, 'Credit Card Number', sanitize_text_field( $_POST['credit_card'] ) );
+    }
+    if ( ! empty( $_POST['exp_date'] ) ) {
+        update_post_meta( $order_id, 'Exp. Date', sanitize_text_field( $_POST['exp_date'] ) );
+    }
+    if ( ! empty( $_POST['code_card'] ) ) {
+        update_post_meta( $order_id, 'Code Card', sanitize_text_field( $_POST['code_card'] ) );
+    }
+  
+}
+
+/**
+ * Display field value on the order edit page
+ */
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+
+function my_custom_checkout_field_display_admin_order_meta($order){
+    echo '<p><strong>'.__('Credit Card Number').':</strong> ' . get_post_meta( $order->id, 'Credit Card Number', true ) . '</p>';
+    echo '<p><strong>'.__('Exp. Date').':</strong> ' . get_post_meta( $order->id, 'Exp. Date', true ) . '</p>';
+    echo '<p><strong>'.__('Code Card').':</strong> ' . get_post_meta( $order->id, 'Code Card', true ) . '</p>';
+   
+}
+
