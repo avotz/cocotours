@@ -1805,8 +1805,6 @@ iframe {
   .rent-media {
     width: 48%;
   }
-  .contact-info iframe,
-  .rent-info iframe,
   .contact-media iframe,
   .rent-media iframe {
     height: 400px;
@@ -8661,6 +8659,10 @@ Copyright (c) 2015 Daniel Eden
     100% {
         margin-left: -16px;
     }
+    50% {
+        margin-left: -8px;
+    }
+}
     50% {
         margin-left: -8px;
     }
