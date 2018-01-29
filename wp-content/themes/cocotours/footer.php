@@ -152,5 +152,26 @@
 	
 <?php wp_footer(); ?>
  
+ <script>
+ 
+    var wpcf7ElmInquireTour = document.querySelector( '#tour-popup div.wpcf7' );
+    var wpcf7ElmContact = document.querySelector( '.page-template-page-contact div.wpcf7' ); //form contact
+    
+
+      if(wpcf7ElmContact)
+    {
+          wpcf7ElmContact.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Contact Form', 'submit');
+        }, false );
+      }
+       if(wpcf7ElmInquireTour)
+    {
+          wpcf7ElmInquireTour.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Inquire Tour Form', 'submit');
+        }, false );
+      }
+    
+   
+</script>
 </body>
 </html>
