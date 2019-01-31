@@ -2219,3 +2219,6 @@ margin-bottom 0,
     padding-right: 1rem;
   }
 }
+.woocommerce-additional-fields span.optional {
+  display: none;
+}

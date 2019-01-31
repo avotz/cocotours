@@ -2219,6 +2219,9 @@ margin-bottom 0,
     padding-right: 1rem;
   }
 }
+.woocommerce-additional-fields span.optional {
+  display: none;
+}
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -8659,10 +8662,6 @@ Copyright (c) 2015 Daniel Eden
     100% {
         margin-left: -16px;
     }
-    50% {
-        margin-left: -8px;
-    }
-}
     50% {
         margin-left: -8px;
     }
